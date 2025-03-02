@@ -15,5 +15,7 @@ namespace CloudDevPOE.Data
         }
 
         public DbSet<CloudDevPOE.Models.Venue> Venue { get; set; } = default!;
+        public DbSet<CloudDevPOE.Models.Event> Event { get; set; } = default!;
+        public DbSet<CloudDevPOE.Models.Booking> Booking { get; set; } = default!;
     }
 }
