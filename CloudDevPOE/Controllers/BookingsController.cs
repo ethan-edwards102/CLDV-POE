@@ -22,7 +22,12 @@ namespace CloudDevPOE.Controllers
         // GET: Bookings
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Booking.ToListAsync());
+            var bookings = _context.Booking
+                .Include(b => b.Venue)
+                .Include(b => b.Event)
+                .ToListAsync();
+
+            return View(await bookings);
         }
 
         // GET: Bookings/Details/5
@@ -34,7 +39,10 @@ namespace CloudDevPOE.Controllers
             }
 
             var booking = await _context.Booking
+                .Include(b => b.Venue)
+                .Include(b => b.Event)
                 .FirstOrDefaultAsync(m => m.BookingId == id);
+            
             if (booking == null)
             {
                 return NotFound();
