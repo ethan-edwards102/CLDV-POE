@@ -34,7 +34,7 @@ namespace CloudDevPOE.Controllers
             }
 
             var @event = await _context.Event
-                .FirstOrDefaultAsync(m => m.Id == id);
+                .FirstOrDefaultAsync(m => m.EventId == id);
             if (@event == null)
             {
                 return NotFound();
@@ -88,7 +88,7 @@ namespace CloudDevPOE.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,EventName,EventDate,Description")] Event @event)
         {
-            if (id != @event.Id)
+            if (id != @event.EventId)
             {
                 return NotFound();
             }
@@ -102,7 +102,7 @@ namespace CloudDevPOE.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!EventExists(@event.Id))
+                    if (!EventExists(@event.EventId))
                     {
                         return NotFound();
                     }
@@ -125,7 +125,7 @@ namespace CloudDevPOE.Controllers
             }
 
             var @event = await _context.Event
-                .FirstOrDefaultAsync(m => m.Id == id);
+                .FirstOrDefaultAsync(m => m.EventId == id);
             if (@event == null)
             {
                 return NotFound();
@@ -151,7 +151,7 @@ namespace CloudDevPOE.Controllers
 
         private bool EventExists(int id)
         {
-            return _context.Event.Any(e => e.Id == id);
+            return _context.Event.Any(e => e.EventId == id);
         }
     }
 }

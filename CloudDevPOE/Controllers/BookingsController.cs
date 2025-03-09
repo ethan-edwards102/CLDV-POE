@@ -34,7 +34,7 @@ namespace CloudDevPOE.Controllers
             }
 
             var booking = await _context.Booking
-                .FirstOrDefaultAsync(m => m.Id == id);
+                .FirstOrDefaultAsync(m => m.BookingId == id);
             if (booking == null)
             {
                 return NotFound();
@@ -88,7 +88,7 @@ namespace CloudDevPOE.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,EventId,VenueId,BookingDate")] Booking booking)
         {
-            if (id != booking.Id)
+            if (id != booking.BookingId)
             {
                 return NotFound();
             }
@@ -102,7 +102,7 @@ namespace CloudDevPOE.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!BookingExists(booking.Id))
+                    if (!BookingExists(booking.BookingId))
                     {
                         return NotFound();
                     }
@@ -125,7 +125,7 @@ namespace CloudDevPOE.Controllers
             }
 
             var booking = await _context.Booking
-                .FirstOrDefaultAsync(m => m.Id == id);
+                .FirstOrDefaultAsync(m => m.BookingId == id);
             if (booking == null)
             {
                 return NotFound();
@@ -151,7 +151,7 @@ namespace CloudDevPOE.Controllers
 
         private bool BookingExists(int id)
         {
-            return _context.Booking.Any(e => e.Id == id);
+            return _context.Booking.Any(e => e.BookingId == id);
         }
     }
 }

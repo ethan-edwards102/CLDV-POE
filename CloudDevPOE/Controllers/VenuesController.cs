@@ -34,7 +34,7 @@ namespace CloudDevPOE.Controllers
             }
 
             var venue = await _context.Venue
-                .FirstOrDefaultAsync(m => m.Id == id);
+                .FirstOrDefaultAsync(m => m.VenueId == id);
             if (venue == null)
             {
                 return NotFound();
@@ -88,7 +88,7 @@ namespace CloudDevPOE.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,VenueName,Location,Capacity,ImageUrl")] Venue venue)
         {
-            if (id != venue.Id)
+            if (id != venue.VenueId)
             {
                 return NotFound();
             }
@@ -102,7 +102,7 @@ namespace CloudDevPOE.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!VenueExists(venue.Id))
+                    if (!VenueExists(venue.VenueId))
                     {
                         return NotFound();
                     }
@@ -125,7 +125,7 @@ namespace CloudDevPOE.Controllers
             }
 
             var venue = await _context.Venue
-                .FirstOrDefaultAsync(m => m.Id == id);
+                .FirstOrDefaultAsync(m => m.VenueId == id);
             if (venue == null)
             {
                 return NotFound();
@@ -151,7 +151,7 @@ namespace CloudDevPOE.Controllers
 
         private bool VenueExists(int id)
         {
-            return _context.Venue.Any(e => e.Id == id);
+            return _context.Venue.Any(e => e.VenueId == id);
         }
     }
 }

@@ -1,9 +1,5 @@
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
 using CloudDevPOE.Data;
-using System;
-using System.Linq;
-
+using Microsoft.EntityFrameworkCore;
 
 namespace CloudDevPOE.Models;
 
@@ -11,135 +7,90 @@ public static class SeedData
 {
     public static void Initialize(IServiceProvider serviceProvider)
     {
-        using (var context = new CloudDevPOEContext(
-                   serviceProvider.GetRequiredService<
-                       DbContextOptions<CloudDevPOEContext>>()))
+        using var context =
+            new CloudDevPOEContext(serviceProvider.GetRequiredService<DbContextOptions<CloudDevPOEContext>>());
+        
+        var seeded = !context.Venue.Any() | !context.Event.Any() | !context.Booking.Any();
+
+        if (seeded)
         {
-            bool changed = false;
-
-            if (!context.Venue.Any())
+            var events = new List<Event>
             {
-                context.Venue.AddRange(
-                    new Venue
-                    {
-                        VenueName = "Grand Convention Center",
-                        Location = "123 Main St, New York, NY",
-                        Capacity = 5000,
-                        ImageUrl = "https://example.com/images/grand_convention.jpg"
-                    },
-                    new Venue
-                    {
-                        VenueName = "Sunset Banquet Hall",
-                        Location = "45 Sunset Blvd, Los Angeles, CA",
-                        Capacity = 300,
-                        ImageUrl = "https://example.com/images/sunset_banquet.jpg"
-                    },
-                    new Venue
-                    {
-                        VenueName = "Skyline Rooftop",
-                        Location = "78 Downtown Ave, Chicago, IL",
-                        Capacity = 150,
-                        ImageUrl = "https://example.com/images/skyline_rooftop.jpg"
-                    },
-                    new Venue
-                    {
-                        VenueName = "Lakeside Pavilion",
-                        Location = "Lakeview Park, Seattle, WA",
-                        Capacity = 1000,
-                        ImageUrl = "https://example.com/images/lakeside_pavilion.jpg"
-                    },
-                    new Venue
-                    {
-                        VenueName = "Royal Opera House",
-                        Location = "Opera Square, London, UK",
-                        Capacity = 2500,
-                        ImageUrl = "https://example.com/images/royal_opera.jpg"
-                    }
-                );
+                new()
+                {
+                    EventId = 1,
+                    EventName = "Tech Conference 2025",
+                    EventDate = new DateOnly(2025, 5, 15),
+                    Description = "An annual gathering of tech enthusiasts, developers, and industry leaders.",
+                    Bookings = new List<Booking>() // Initialize Bookings list
+                },
+                    
+                new()
+                {
+                    EventId = 2,
+                    EventName = "Music Fest",
+                    EventDate = new DateOnly(2025, 6, 20),
+                    Description = "A weekend-long festival featuring top artists and emerging bands.",
+                    Bookings = new List<Booking>()
+                }
+            };
+
+            var venues = new List<Venue>
+            {
+                new()
+                {
+                    VenueId = 1,
+                    VenueName = "Grand Convention Center",
+                    Location = "123 Main St, New York, NY",
+                    Capacity = 5000,
+                    ImageUrl = "https://www.congres-deauville.com/wp-content/uploads/2023/01/audi-1497-plenierejbasile-11-1024x683.jpg",
+                    Bookings = new List<Booking>() // Initialize Bookings list
+                },
                 
-                changed = true;
-            }
-
-            if (!context.Event.Any())
-            {
-                context.Event.AddRange(
-                    new Event
-                    {
-                        EventName = "Tech Conference 2025",
-                        EventDate = new DateOnly(2025, 5, 15),
-                        Description = "An annual gathering of tech enthusiasts, developers, and industry leaders."
-                    },
-                    new Event
-                    {
-                        EventName = "Music Fest",
-                        EventDate = new DateOnly(2025, 6, 20),
-                        Description = "A weekend-long festival featuring top artists and emerging bands."
-                    },
-                    new Event
-                    {
-                        EventName = "Business Expo",
-                        EventDate = new DateOnly(2025, 7, 10),
-                        Description = "An exhibition showcasing innovative startups and business solutions."
-                    },
-                    new Event
-                    {
-                        EventName = "Gaming Convention",
-                        EventDate = new DateOnly(2025, 8, 5),
-                        Description = "A convention for gamers, developers, and industry professionals."
-                    },
-                    new Event
-                    {
-                        EventName = "Charity Gala",
-                        EventDate = new DateOnly(2025, 9, 25),
-                        Description = "A fundraising event to support local charities and humanitarian efforts."
-                    }
-                );
+                new()
+                {
+                    VenueId = 2,
+                    VenueName = "Sunset Banquet Hall",
+                    Location = "45 Sunset Blvd, Los Angeles, CA",
+                    Capacity = 300,
+                    ImageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGp5W-ymP13wMK6Ub_EV1w7OHKaneR7N3Meg&s",
+                    Bookings = new List<Booking>()
+                }
+            };
                 
-                changed = true;
-            }
-
-            if (!context.Booking.Any())
+            var bookings = new List<Booking>
             {
-                context.Booking.AddRange(
-                    new Booking
-                    {
-                        EventId = 1, // Tech Conference 2025
-                        VenueId = 1, // Grand Convention Center
-                        BookingDate = new DateOnly(2025, 3, 1)
-                    },
-                    new Booking
-                    {
-                        EventId = 2, // Music Fest
-                        VenueId = 3, // Skyline Rooftop
-                        BookingDate = new DateOnly(2025, 4, 10)
-                    },
-                    new Booking
-                    {
-                        EventId = 3, // Business Expo
-                        VenueId = 4, // Lakeside Pavilion
-                        BookingDate = new DateOnly(2025, 5, 5)
-                    },
-                    new Booking
-                    {
-                        EventId = 4, // Gaming Convention
-                        VenueId = 2, // Sunset Banquet Hall
-                        BookingDate = new DateOnly(2025, 6, 15)
-                    },
-                    new Booking
-                    {
-                        EventId = 5, // Charity Gala
-                        VenueId = 5, // Royal Opera House
-                        BookingDate = new DateOnly(2025, 7, 20)
-                    }
-                );
+                new()
+                {
+                    BookingId = 1,
+                    EventId = 1, // Tech Conference 2025
+                    VenueId = 1, // Grand Convention Center
+                    BookingDate = new DateOnly(2025, 3, 1)
+                },
                 
-                changed = true;
-            }
-
-            if (changed)
+                new()
+                {
+                    BookingId = 2,
+                    EventId = 2, // Music Fest
+                    VenueId = 2, // Sunset Banquet Hall
+                    BookingDate = new DateOnly(2025, 4, 10)
+                }
+            };
+                
+            foreach (var booking in bookings)
             {
-                context.SaveChanges();
+                var eventObj = events.First(e => e.EventId == booking.EventId);
+                eventObj.Bookings.Add(booking);
+
+                var venueObj = venues.First(v => v.VenueId == booking.VenueId);
+                venueObj.Bookings.Add(booking);
             }
+            
+            context.Venue.AddRange(venues);
+            context.Event.AddRange(events);
+            context.Booking.AddRange(bookings);
+
+            context.SaveChanges();
         }
     }
 }

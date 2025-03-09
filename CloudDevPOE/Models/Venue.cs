@@ -4,7 +4,8 @@ namespace CloudDevPOE.Models;
 
 public class Venue
 {
-    public int Id { get; set; }
+    [Key]
+    public int VenueId { get; set; }
     
     [Required]
     public string VenueName { get; set; }
@@ -12,4 +13,7 @@ public class Venue
     public string Location { get; set; }
     public int Capacity { get; set; }
     public string ImageUrl { get; set; }
+    
+    // Navigation
+    public List<Booking> Bookings { get; set; }
 }
