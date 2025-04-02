@@ -17,95 +17,95 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = EventEase
 build_property.RootNamespace = EventEase
-build_property.ProjectDir = C:\Users\greym\RiderProjects\EventEase\
+build_property.ProjectDir = C:\Users\greym\RiderProjects\CLDV-POE\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\greym\RiderProjects\EventEase
+build_property.MSBuildProjectDirectory = C:\Users\greym\RiderProjects\CLDV-POE
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/greym/RiderProjects/EventEase/Views/Booking/Create.cshtml]
+[C:/Users/greym/RiderProjects/CLDV-POE/Views/Booking/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va2luZ1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/greym/RiderProjects/EventEase/Views/Booking/Delete.cshtml]
+[C:/Users/greym/RiderProjects/CLDV-POE/Views/Booking/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va2luZ1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/greym/RiderProjects/EventEase/Views/Booking/Details.cshtml]
+[C:/Users/greym/RiderProjects/CLDV-POE/Views/Booking/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va2luZ1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/greym/RiderProjects/EventEase/Views/Booking/Edit.cshtml]
+[C:/Users/greym/RiderProjects/CLDV-POE/Views/Booking/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va2luZ1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/greym/RiderProjects/EventEase/Views/Booking/Index.cshtml]
+[C:/Users/greym/RiderProjects/CLDV-POE/Views/Booking/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va2luZ1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/greym/RiderProjects/EventEase/Views/Event/Create.cshtml]
+[C:/Users/greym/RiderProjects/CLDV-POE/Views/Event/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/greym/RiderProjects/EventEase/Views/Event/Delete.cshtml]
+[C:/Users/greym/RiderProjects/CLDV-POE/Views/Event/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/greym/RiderProjects/EventEase/Views/Event/Details.cshtml]
+[C:/Users/greym/RiderProjects/CLDV-POE/Views/Event/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/greym/RiderProjects/EventEase/Views/Event/Edit.cshtml]
+[C:/Users/greym/RiderProjects/CLDV-POE/Views/Event/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/greym/RiderProjects/EventEase/Views/Event/Index.cshtml]
+[C:/Users/greym/RiderProjects/CLDV-POE/Views/Event/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/greym/RiderProjects/EventEase/Views/Home/Index.cshtml]
+[C:/Users/greym/RiderProjects/CLDV-POE/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/greym/RiderProjects/EventEase/Views/Shared/Error.cshtml]
+[C:/Users/greym/RiderProjects/CLDV-POE/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/greym/RiderProjects/EventEase/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/greym/RiderProjects/CLDV-POE/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/greym/RiderProjects/EventEase/Views/Venue/Create.cshtml]
+[C:/Users/greym/RiderProjects/CLDV-POE/Views/Venue/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVudWVcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/greym/RiderProjects/EventEase/Views/Venue/Delete.cshtml]
+[C:/Users/greym/RiderProjects/CLDV-POE/Views/Venue/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVudWVcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/greym/RiderProjects/EventEase/Views/Venue/Details.cshtml]
+[C:/Users/greym/RiderProjects/CLDV-POE/Views/Venue/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVudWVcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/greym/RiderProjects/EventEase/Views/Venue/Edit.cshtml]
+[C:/Users/greym/RiderProjects/CLDV-POE/Views/Venue/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVudWVcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/greym/RiderProjects/EventEase/Views/Venue/Index.cshtml]
+[C:/Users/greym/RiderProjects/CLDV-POE/Views/Venue/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVudWVcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/greym/RiderProjects/EventEase/Views/_ViewImports.cshtml]
+[C:/Users/greym/RiderProjects/CLDV-POE/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/greym/RiderProjects/EventEase/Views/_ViewStart.cshtml]
+[C:/Users/greym/RiderProjects/CLDV-POE/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/greym/RiderProjects/EventEase/Views/Shared/_Layout.cshtml]
+[C:/Users/greym/RiderProjects/CLDV-POE/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-h6jhhsk07a

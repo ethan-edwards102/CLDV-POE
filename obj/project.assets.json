@@ -7916,11 +7916,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\greym\\RiderProjects\\EventEase\\EventEase.csproj",
+      "projectUniqueName": "C:\\Users\\greym\\RiderProjects\\CLDV-POE\\EventEase.csproj",
       "projectName": "EventEase",
-      "projectPath": "C:\\Users\\greym\\RiderProjects\\EventEase\\EventEase.csproj",
+      "projectPath": "C:\\Users\\greym\\RiderProjects\\CLDV-POE\\EventEase.csproj",
       "packagesPath": "C:\\Users\\greym\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\greym\\RiderProjects\\EventEase\\obj\\",
+      "outputPath": "C:\\Users\\greym\\RiderProjects\\CLDV-POE\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\greym\\AppData\\Roaming\\NuGet\\NuGet.Config"

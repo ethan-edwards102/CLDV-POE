@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0j/KiqRHb7o=",
+  "dgSpecHash": "5tzat8mV4bw=",
   "success": true,
-  "projectFilePath": "C:\\Users\\greym\\RiderProjects\\EventEase\\EventEase.csproj",
+  "projectFilePath": "C:\\Users\\greym\\RiderProjects\\CLDV-POE\\EventEase.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\greym\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\greym\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

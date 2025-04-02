@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace EventEase.Models;
@@ -19,5 +20,6 @@ public class Booking
     public virtual Venue? Venue { get; set; }
 
     [DataType(DataType.Date)]
+    [Display(Name = "Date")]
     public DateOnly BookingDate { get; set; }
 }
