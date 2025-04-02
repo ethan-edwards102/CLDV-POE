@@ -5,6 +5,8 @@
 }
 
 <div class="container mt-5">
+    
+    <!-- Heading -->
     <h2 class="mb-4">Create New Venue</h2>
 
     <div class="card shadow-sm">
@@ -14,7 +16,7 @@
 
                 <div class="mb-3">
                     <label asp-for="VenueName" class="form-label">Venue Name</label>
-                    <input asp-for="VenueName" class="form-control" required />
+                    <input asp-for="VenueName" class="form-control" required/>
                     <div class="invalid-feedback">
                         Please enter a venue name.
                     </div>
@@ -23,7 +25,7 @@
 
                 <div class="mb-3">
                     <label asp-for="Location" class="form-label">Location</label>
-                    <input asp-for="Location" class="form-control" required />
+                    <input asp-for="Location" class="form-control" required/>
                     <div class="invalid-feedback">
                         Please enter a location.
                     </div>
@@ -32,7 +34,7 @@
 
                 <div class="mb-3">
                     <label asp-for="Capacity" class="form-label">Capacity (Seats)</label>
-                    <input asp-for="Capacity" type="number" class="form-control" required />
+                    <input asp-for="Capacity" type="number" class="form-control" required/>
                     <div class="invalid-feedback">
                         Please enter the seating capacity.
                     </div>
@@ -41,7 +43,7 @@
 
                 <div class="mb-3">
                     <label asp-for="ImageUrl" class="form-label">Image URL</label>
-                    <input asp-for="ImageUrl" type="url" class="form-control" required />
+                    <input asp-for="ImageUrl" type="url" class="form-control" required/>
                     <div class="invalid-feedback">
                         Please provide a valid image URL.
                     </div>
@@ -59,21 +61,25 @@
 
 @section Scripts {
     <script>
-        // Bootstrap custom validation
+        // Validation (Needed for Bootstrap forms)
         (function () {
             'use strict'
 
-            const forms = document.querySelectorAll('.needs-validation')
+            // Find all forms
+            var forms = document.querySelectorAll('.needs-validation')
 
-            Array.from(forms).forEach(function (form) {
-                form.addEventListener('submit', function (event) {
-                    if (!form.checkValidity()) {
-                        event.preventDefault()
-                        event.stopPropagation()
-                    }
-                    form.classList.add('was-validated')
-                }, false)
-            })
+            // Validate all fields
+            Array.prototype.slice.call(forms)
+                .forEach(function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+
+                        form.classList.add('was-validated')
+                    }, false)
+                })
         })()
     </script>
 }

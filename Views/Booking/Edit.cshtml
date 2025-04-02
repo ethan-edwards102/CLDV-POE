@@ -5,12 +5,15 @@
 }
 
 <div class="container mt-5">
+    
+    <!-- Heading -->
     <h2 class="mb-4">Edit Booking</h2>
-
+    
+    <!-- Form -->
     <div class="card shadow-sm">
         <div class="card-body">
             <form asp-action="Edit" method="post" class="needs-validation" novalidate>
-                <input type="hidden" asp-for="BookingId" />
+                <input type="hidden" asp-for="BookingId"/>
                 <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
 
                 <div class="mb-3">
@@ -33,7 +36,7 @@
 
                 <div class="mb-3">
                     <label asp-for="BookingDate" class="form-label">Booking Date</label>
-                    <input asp-for="BookingDate" type="date" class="form-control" required />
+                    <input asp-for="BookingDate" type="date" class="form-control" required/>
                     <div class="invalid-feedback">
                         Please select a booking date.
                     </div>
@@ -51,21 +54,25 @@
 
 @section Scripts {
     <script>
-        // Bootstrap's custom validation
+        // Validation (Needed for Bootstrap forms)
         (function () {
             'use strict'
 
-            const forms = document.querySelectorAll('.needs-validation')
+            // Find all forms
+            var forms = document.querySelectorAll('.needs-validation')
 
-            Array.from(forms).forEach(function (form) {
-                form.addEventListener('submit', function (event) {
-                    if (!form.checkValidity()) {
-                        event.preventDefault()
-                        event.stopPropagation()
-                    }
-                    form.classList.add('was-validated')
-                }, false)
-            })
+            // Validate all fields
+            Array.prototype.slice.call(forms)
+                .forEach(function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+
+                        form.classList.add('was-validated')
+                    }, false)
+                })
         })()
     </script>
 }

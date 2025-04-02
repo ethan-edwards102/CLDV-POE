@@ -5,8 +5,10 @@
 }
 
 <div class="container mt-5">
+    <!-- Heading -->
     <h2 class="mb-4">Create New Event</h2>
 
+    <!-- Form -->
     <div class="card shadow-sm">
         <div class="card-body">
             <form asp-action="Create" method="post" class="needs-validation" novalidate>
@@ -14,7 +16,7 @@
 
                 <div class="mb-3">
                     <label asp-for="EventName" class="form-label">Event Name</label>
-                    <input asp-for="EventName" class="form-control" required />
+                    <input asp-for="EventName" class="form-control" required/>
                     <div class="invalid-feedback">
                         Please enter an event name.
                     </div>
@@ -23,7 +25,7 @@
 
                 <div class="mb-3">
                     <label asp-for="EventDate" class="form-label">Event Date</label>
-                    <input asp-for="EventDate" type="date" class="form-control" required />
+                    <input asp-for="EventDate" type="date" class="form-control" required/>
                     <div class="invalid-feedback">
                         Please select a valid date.
                     </div>
@@ -50,21 +52,25 @@
 
 @section Scripts {
     <script>
-        // Bootstrap validation
+        // Validation (Needed for Bootstrap forms)
         (function () {
             'use strict'
 
-            const forms = document.querySelectorAll('.needs-validation')
+            // Find all forms
+            var forms = document.querySelectorAll('.needs-validation')
 
-            Array.from(forms).forEach(function (form) {
-                form.addEventListener('submit', function (event) {
-                    if (!form.checkValidity()) {
-                        event.preventDefault()
-                        event.stopPropagation()
-                    }
-                    form.classList.add('was-validated')
-                }, false)
-            })
+            // Validate all fields
+            Array.prototype.slice.call(forms)
+                .forEach(function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+
+                        form.classList.add('was-validated')
+                    }, false)
+                })
         })()
     </script>
 }
