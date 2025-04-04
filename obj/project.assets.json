@@ -7911,24 +7911,31 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\greym\\.nuget\\packages\\": {}
+    "C:\\Users\\lab_services_student\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\greym\\RiderProjects\\CLDV-POE\\EventEase.csproj",
+      "projectUniqueName": "C:\\Users\\lab_services_student\\Documents\\Visual Studio 2022\\CLDV-POE\\EventEase.csproj",
       "projectName": "EventEase",
-      "projectPath": "C:\\Users\\greym\\RiderProjects\\CLDV-POE\\EventEase.csproj",
-      "packagesPath": "C:\\Users\\greym\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\greym\\RiderProjects\\CLDV-POE\\obj\\",
+      "projectPath": "C:\\Users\\lab_services_student\\Documents\\Visual Studio 2022\\CLDV-POE\\EventEase.csproj",
+      "packagesPath": "C:\\Users\\lab_services_student\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\lab_services_student\\Documents\\Visual Studio 2022\\CLDV-POE\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\greym\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\lab_services_student\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

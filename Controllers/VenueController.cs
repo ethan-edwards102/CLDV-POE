@@ -58,6 +58,8 @@ namespace EventEase.Controllers
         {
             if (ModelState.IsValid)
             {
+                venue.ImageUrl = "https://www.congres-deauville.com/wp-content/uploads/2023/01/audi-1497-plenierejbasile-11-1024x683.jpg";
+
                 _context.Add(venue);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -96,6 +98,8 @@ namespace EventEase.Controllers
 
             if (ModelState.IsValid)
             {
+                venue.ImageUrl = "https://www.congres-deauville.com/wp-content/uploads/2023/01/audi-1497-plenierejbasile-11-1024x683.jpg";
+
                 try
                 {
                     _context.Update(venue);

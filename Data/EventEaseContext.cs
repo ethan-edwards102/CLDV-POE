@@ -34,7 +34,7 @@ namespace EventEase.Data
                     VenueName = "Sunset Banquet Hall",
                     Location = "45 Sunset Blvd, Los Angeles, CA",
                     Capacity = 300,
-                    ImageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGp5W-ymP13wMK6Ub_EV1w7OHKaneR7N3Meg&s"
+                    ImageUrl = "https://www.congres-deauville.com/wp-content/uploads/2023/01/audi-1497-plenierejbasile-11-1024x683.jpg"
                 }
             );
 
